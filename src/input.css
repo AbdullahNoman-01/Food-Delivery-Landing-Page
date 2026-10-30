@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --font-script: "Caveat", cursive;
+  --font-heading: "Montserrat", sans-serif;
+  --color-bistroGold: #c59b27;
+  --color-bistroGoldDark: #b0871e;
+  --color-bistroDark: #18181b;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+/* .font-script {
+  font-family: 'Caveat', cursive;
+}
+
+.font-heading {
+  font-family: 'Montserrat', sans-serif;
+} */
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #c59b27;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b0871e;
+}
+
+/* Sticky Navbar Transitions */
+#main-navbar {
+  transition: all 0.3s ease-in-out;
+}
+
+#main-navbar.navbar-transparent {
+  background-color: transparent;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#main-navbar.navbar-transparent .nav-link {
+  color: #ffffff;
+}
+
+#main-navbar.navbar-transparent .nav-link:hover {
+  color: #facc15;
+}
+
+#main-navbar.navbar-transparent .logo-box {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+#main-navbar.navbar-transparent .logo-divider {
+  background-color: #ffffff;
+}
+
+#main-navbar.navbar-transparent .nav-link.active-link {
+  border-bottom-color: #facc15;
+  color: #facc15;
+}
+
+/* Sticky state matching Image 2 */
+#main-navbar.navbar-sticky {
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #f0f0f0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+#main-navbar.navbar-sticky .nav-link {
+  color: #27272a;
+}
+
+#main-navbar.navbar-sticky .nav-link:hover {
+  color: #c59b27;
+}
+
+#main-navbar.navbar-sticky .logo-box {
+  border-color: #18181b;
+  color: #18181b;
+}
+
+#main-navbar.navbar-sticky .logo-divider {
+  background-color: #18181b;
+}
+
+#main-navbar.navbar-sticky .nav-link.active-link {
+  border-bottom-color: #c59b27;
+  color: #c59b27;
+}
+
+#main-navbar.navbar-sticky .mobile-toggle-btn {
+  color: #18181b;
+}
+
+#main-navbar.navbar-transparent .mobile-toggle-btn {
+  color: #ffffff;
+}

@@ -74,13 +74,13 @@
         </div>
       </a>
 
-      <!-- Desktop Navigation Menu: Home, Menu, About, Contact -->
+      <!-- Desktop Navigation Menu: Home, Why Us, Menu, About, Contact -->
       <nav class="hidden lg:flex items-center gap-8 text-xs sm:text-sm font-semibold tracking-wider uppercase">
-        <a href="#home" class="nav-link active-link py-1 border-b-2 transition-all">Home</a>
-        <a href="#why-us" class="nav-link py-1 border-b-2 border-transparent transition-all">Why Us</a>
-        <a href="#menu" class="nav-link py-1 border-b-2 border-transparent transition-all">Menu</a>
-        <a href="#about" class="nav-link py-1 border-b-2 border-transparent transition-all">About</a>
-        <a href="#contact" class="nav-link py-1 border-b-2 border-transparent transition-all">Contact</a>
+        <a href="#home" class="nav-link py-1 active-link transition-all">Home</a>
+        <a href="#why-us" class="nav-link py-1 transition-all">Why Us</a>
+        <a href="#menu" class="nav-link py-1 transition-all">Menu</a>
+        <a href="#about" class="nav-link py-1 transition-all">About</a>
+        <a href="#contact" class="nav-link py-1 transition-all">Contact</a>
       </nav>
 
       <!-- Action Button: Order Now & Mobile Toggle -->
@@ -108,14 +108,14 @@
         <span>Home</span>
         <i class="fa-solid fa-chevron-right text-xs"></i>
       </a>
-      <a href="#menu"
-        class="hover:text-[#c59b27] border-b border-neutral-100 pb-2 transition-colors flex items-center justify-between">
-        <span>Menu</span>
-        <i class="fa-solid fa-chevron-right text-xs"></i>
-      </a>
       <a href="#why-us"
         class="hover:text-[#c59b27] border-b border-neutral-100 pb-2 transition-colors flex items-center justify-between">
         <span>Why Choose Us</span>
+        <i class="fa-solid fa-chevron-right text-xs"></i>
+      </a>
+      <a href="#menu"
+        class="hover:text-[#c59b27] border-b border-neutral-100 pb-2 transition-colors flex items-center justify-between">
+        <span>Menu</span>
         <i class="fa-solid fa-chevron-right text-xs"></i>
       </a>
       <a href="#about"
@@ -680,15 +680,18 @@
   <section class="bg-white border-t border-stone-200 py-8 px-4 sm:px-8 relative z-20">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
       
-      <!-- Left: Logo (bistro 18 / FoodieExpress) -->
+      <!-- Left: Logo (FoodieExpress) -->
       <div class="md:col-span-3 flex justify-center md:justify-start">
-        <a href="#home" class="inline-flex items-center border border-neutral-900 px-3.5 py-1.5 rounded text-neutral-900 group">
+        <a href="#home" class="logo-box inline-flex items-center border border-neutral-900 px-3.5 py-1.5 rounded text-neutral-900 group">
           <div class="flex flex-col pr-2 text-right">
-            <span class="text-xl sm:text-2xl font-bold tracking-tight leading-none lowercase">bistro</span>
-            <span class="text-[8px] sm:text-[9px] tracking-tight uppercase opacity-90 mt-0.5">By CS Chefs Caterers</span>
+            <span class="text-xl sm:text-2xl font-bold tracking-tight leading-none">Foodie</span>
+            <span class="text-[8px] sm:text-[9px] tracking-widest uppercase opacity-90 font-semibold mt-0.5">Express Delivery</span>
           </div>
-          <div class="w-[1.5px] h-7 sm:h-8 bg-neutral-900 mx-1"></div>
-          <span class="text-2xl sm:text-3xl font-black leading-none pl-1">18</span>
+          <div class="logo-divider w-[1.5px] h-7 sm:h-8 bg-neutral-900 mx-1"></div>
+          <div class="flex items-center gap-1 pl-1">
+            <i class="fa-solid fa-bolt text-[#c59b27] text-lg sm:text-xl"></i>
+            <span class="text-xl sm:text-2xl font-black tracking-tight leading-none">Express</span>
+          </div>
         </a>
       </div>
 
@@ -704,7 +707,7 @@
 
       <!-- Right: Email Input Field with Paper Plane Icon -->
       <div class="md:col-span-4 flex justify-center md:justify-end">
-        <form onsubmit="event.preventDefault(); alert('🎉 Thank you for subscribing to Bistro 18 / FoodieExpress!');" class="w-full max-w-sm">
+        <form onsubmit="event.preventDefault(); alert('🎉 Thank you for subscribing to FoodieExpress!');" class="w-full max-w-sm">
           <div class="flex items-center bg-stone-100 rounded border border-stone-200 overflow-hidden shadow-inner">
             <input type="email" required placeholder="Email" class="w-full bg-transparent px-4 py-2.5 text-xs sm:text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none">
             <button type="submit" aria-label="Subscribe" class="px-4 py-2.5 text-[#c59b27] hover:text-[#b0871e] hover:scale-110 transition-transform focus:outline-none">
@@ -745,13 +748,13 @@
           <!-- 3 Story Paragraphs matching image -->
           <div class="space-y-4 text-xs sm:text-sm text-neutral-300 leading-relaxed font-light">
             <p>
-              Enjoy freshly prepared food in Ballinasloe town centre. Located on Dunlo street, our bistro offers a quirky, quaint &amp; relaxing atmosphere in which to enjoy affordable dishes, freshly prepared by our chefs every day
+              Enjoy freshly prepared food in Ballinasloe town centre or delivered directly to your doorstep. Located on Dunlo street, our kitchen hub offers a quirky, quaint &amp; relaxing atmosphere in which to enjoy affordable dishes, freshly prepared by our chefs every day.
             </p>
             <p>
-              On Monday 31st August 2020, Bistro 18 on Dunlo Street opened its doors to the public!
+              On Monday 31st August 2020, FoodieExpress on Dunlo Street opened its doors to the public!
             </p>
             <p class="font-normal text-stone-200">
-              We are open daily serving Breakfast, Brunch, Lunch, Late Lunch, Fresh Bakes &amp; Takeaways
+              We are open daily serving Breakfast, Brunch, Lunch, Late Lunch, Fresh Bakes &amp; Fast Doorstep Delivery.
             </p>
           </div>
 
@@ -781,8 +784,8 @@
             <!-- Email -->
             <div class="flex items-center gap-3">
               <i class="fa-regular fa-envelope text-2xl text-white"></i>
-              <a href="mailto:info@bistro18.ie" class="text-xs sm:text-sm font-semibold text-[#c59b27] hover:underline truncate">
-                info@bistro18.ie
+              <a href="mailto:orders@foodieexpress.com" class="text-xs sm:text-sm font-semibold text-[#c59b27] hover:underline truncate">
+                orders@foodieexpress.com
               </a>
             </div>
 
@@ -875,7 +878,7 @@
 
       <!-- Copyright Sub-Footer Bar -->
       <div class="border-t border-neutral-900 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-neutral-500 text-xs">
-        <p>&copy; 2026 Bistro 18 / FoodieExpress. All rights reserved. By CS Chefs Caterers.</p>
+        <p>&copy; 2026 FoodieExpress. All rights reserved.</p>
         <div class="flex gap-6">
           <a href="#" class="hover:text-stone-300 transition-colors">Privacy Policy</a>
           <a href="#" class="hover:text-stone-300 transition-colors">Terms of Service</a>
@@ -950,26 +953,46 @@
       });
     }
 
-    // Active link highlighting on scroll
-    const sections = document.querySelectorAll('section[id], div[id="dishes"]');
-    const navLinks = document.querySelectorAll('header nav a');
+    // Active link highlighting on scroll (supports Home, Why Us, Menu, About, and Contact footer)
+    const desktopNavLinks = document.querySelectorAll('#main-navbar nav a.nav-link');
+    const trackedSections = [
+      document.getElementById('home'),
+      document.getElementById('why-us'),
+      document.getElementById('menu'),
+      document.getElementById('about'),
+      document.getElementById('contact')
+    ].filter(Boolean);
 
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        if (window.scrollY >= sectionTop) {
-          current = section.getAttribute('id');
-        }
-      });
+    function updateActiveSection() {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
 
-      navLinks.forEach(link => {
-        link.classList.remove('active-link');
-        if (link.getAttribute('href') === `#${current}`) {
+      let currentId = 'home';
+
+      // If user has scrolled to or near the bottom of the page, activate Contact
+      if (scrollY + windowHeight >= docHeight - 100) {
+        currentId = 'contact';
+      } else {
+        const scrollPosition = scrollY + 160;
+        trackedSections.forEach(section => {
+          if (scrollPosition >= section.offsetTop) {
+            currentId = section.getAttribute('id');
+          }
+        });
+      }
+
+      desktopNavLinks.forEach(link => {
+        if (link.getAttribute('href') === `#${currentId}`) {
           link.classList.add('active-link');
+        } else {
+          link.classList.remove('active-link');
         }
       });
-    }, { passive: true });
+    }
+
+    window.addEventListener('scroll', updateActiveSection, { passive: true });
+    window.addEventListener('DOMContentLoaded', updateActiveSection);
 
     // Interactive Order Dish Alert
     function orderDish(name, price) {

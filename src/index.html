@@ -85,16 +85,16 @@
 
       <!-- Action Button: Order Now & Mobile Toggle -->
       <div class="flex items-center gap-3">
-        <!-- Order Now Button -->
+        <!-- Order Now Button (Desktop Only; on mobile it is inside the mobile drawer) -->
         <a href="#menu"
-          class="bg-[#c59b27] hover:bg-[#b0871e] text-white px-5 sm:px-6 py-2 sm:py-2.5 rounded-md font-semibold text-xs sm:text-sm tracking-wide shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200 flex items-center gap-2">
+          class="hidden lg:flex bg-[#c59b27] hover:bg-[#b0871e] text-white px-5 sm:px-6 py-2 sm:py-2.5 rounded-md font-semibold text-xs sm:text-sm tracking-wide shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200 items-center gap-2">
           <i class="fa-solid fa-bag-shopping"></i>
           <span>Order Now</span>
         </a>
 
-        <!-- Mobile Menu Toggle Button -->
+        <!-- Mobile Menu Toggle Button (Visible on mobile/tablet, hidden on desktop) -->
         <button id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu"
-          class="mobile-toggle-btn lg:hidden text-2xl p-1 focus:outline-none transition-colors">
+          class="mobile-toggle-btn lg:hidden text-2xl p-1 focus:outline-none transition-colors cursor-pointer">
           <i id="menu-icon" class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -104,32 +104,30 @@
     <!-- Mobile Dropdown Navigation -->
     <div id="mobile-menu"
       class="hidden lg:hidden bg-white/95 backdrop-blur-md text-neutral-800 shadow-xl border-t border-neutral-100 mt-3 rounded-b-lg px-6 py-5 flex flex-col gap-4 text-sm font-semibold tracking-wider uppercase">
-      <a href="#home" class="text-[#c59b27] border-b border-neutral-100 pb-2 flex items-center justify-between">
+      <a href="#home" class="mobile-nav-link text-[#c59b27] font-bold border-b border-neutral-100 pb-2 flex items-center justify-between transition-colors">
         <span>Home</span>
         <i class="fa-solid fa-chevron-right text-xs"></i>
       </a>
-      <a href="#why-us"
-        class="hover:text-[#c59b27] border-b border-neutral-100 pb-2 transition-colors flex items-center justify-between">
+      <a href="#why-us" class="mobile-nav-link text-neutral-800 hover:text-[#c59b27] border-b border-neutral-100 pb-2 transition-colors flex items-center justify-between">
         <span>Why Choose Us</span>
         <i class="fa-solid fa-chevron-right text-xs"></i>
       </a>
-      <a href="#menu"
-        class="hover:text-[#c59b27] border-b border-neutral-100 pb-2 transition-colors flex items-center justify-between">
+      <a href="#menu" class="mobile-nav-link text-neutral-800 hover:text-[#c59b27] border-b border-neutral-100 pb-2 transition-colors flex items-center justify-between">
         <span>Menu</span>
         <i class="fa-solid fa-chevron-right text-xs"></i>
       </a>
-      <a href="#about"
-        class="hover:text-[#c59b27] border-b border-neutral-100 pb-2 transition-colors flex items-center justify-between">
+      <a href="#about" class="mobile-nav-link text-neutral-800 hover:text-[#c59b27] border-b border-neutral-100 pb-2 transition-colors flex items-center justify-between">
         <span>About</span>
         <i class="fa-solid fa-chevron-right text-xs"></i>
       </a>
-      <a href="#contact"
-        class="hover:text-[#c59b27] border-b border-neutral-100 pb-2 transition-colors flex items-center justify-between">
+      <a href="#contact" class="mobile-nav-link text-neutral-800 hover:text-[#c59b27] border-b border-neutral-100 pb-2 transition-colors flex items-center justify-between">
         <span>Contact</span>
         <i class="fa-solid fa-chevron-right text-xs"></i>
       </a>
-      <a href="#menu" class="bg-[#c59b27] text-white text-center py-2.5 rounded-md font-semibold mt-2 shadow">
-        Order Now
+      <!-- Mobile Order Now Button at bottom of drawer -->
+      <a href="#menu" class="bg-[#c59b27] hover:bg-[#b0871e] text-white text-center py-3 rounded-lg font-bold tracking-wider mt-2 shadow hover:shadow-md flex items-center justify-center gap-2 active:scale-95 transition-all">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Order Now</span>
       </a>
     </div>
   </header>
@@ -220,7 +218,7 @@
   </section>
 
   <!-- ================= 4. WHY CHOOSE US? ================= -->
-  <section id="why-us" class="py-20 sm:py-24 px-4 sm:px-8 bg-white border-b border-stone-200">
+  <section id="why-us" class="scroll-mt-16 sm:scroll-mt-20 py-20 sm:py-24 px-4 sm:px-8 bg-white border-b border-stone-200">
     <div class="max-w-7xl mx-auto">
 
       <!-- Section Header -->
@@ -317,7 +315,7 @@
   </section>
 
   <!-- ================= 3. POPULAR DISHES ================= -->
-  <section id="menu" class="py-20 sm:py-28 px-4 sm:px-8 bg-stone-100">
+  <section id="menu" class="scroll-mt-16 sm:scroll-mt-20 py-20 sm:py-28 px-4 sm:px-8 bg-stone-100">
     <div id="dishes" class="max-w-7xl mx-auto">
 
       <!-- Section Header -->
@@ -489,7 +487,7 @@
   </section>
 
   <!-- ================= ABOUT SECTION (Image 2 Style Hub) ================= -->
-  <section id="about" class="py-20 sm:py-28 px-4 sm:px-8 bg-white">
+  <section id="about" class="scroll-mt-16 sm:scroll-mt-20 py-20 sm:py-28 px-4 sm:px-8 bg-white">
     <div class="max-w-7xl mx-auto">
 
       <!-- Section Header -->
@@ -625,6 +623,7 @@
     </div>
   </section>
 
+ 
   <!-- ================= 5. SPECIAL OFFER SECTION ================= -->
   <section id="special-offer"
     class="relative py-20 px-4 sm:px-8 bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 text-white overflow-hidden shadow-2xl">
@@ -665,63 +664,152 @@
           Browse Eligible Menu Items &rarr;
         </a>
       </div>
-
-      <!-- Toast Feedback Message -->
-      <div id="offer-toast"
-        class="hidden mt-6 inline-block bg-emerald-600 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow-lg">
-        <i class="fa-solid fa-check-circle mr-1"></i> Coupon code <strong>FOODIE20</strong> copied to clipboard!
-        Discount applied.
-      </div>
-
     </div>
   </section>
 
-  <!-- ================= 6. PRE-FOOTER NEWSLETTER BAR (Exact Image Style) ================= -->
-  <section class="bg-white border-t border-stone-200 py-8 px-4 sm:px-8 relative z-20">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+  <!-- ================= 6. PRE-FOOTER INTERACTIVE MESSAGE & NEWSLETTER SECTION ================= -->
+  <section id="contact" class="scroll-mt-16 sm:scroll-mt-20 bg-gradient-to-b from-stone-50 via-white to-stone-100 border-t border-b border-stone-200 py-12 sm:py-16 px-4 sm:px-8 relative z-20 overflow-hidden">
+    <!-- Ambient subtle background decorations -->
+    <div class="absolute -top-16 -left-16 w-72 h-72 bg-amber-100/60 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-16 -right-16 w-72 h-72 bg-[#c59b27]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
       
-      <!-- Left: Logo (FoodieExpress) -->
-      <div class="md:col-span-3 flex justify-center md:justify-start">
-        <a href="#home" class="logo-box inline-flex items-center border border-neutral-900 px-3.5 py-1.5 rounded text-neutral-900 group">
-          <div class="flex flex-col pr-2 text-right">
-            <span class="text-xl sm:text-2xl font-bold tracking-tight leading-none">Foodie</span>
-            <span class="text-[8px] sm:text-[9px] tracking-widest uppercase opacity-90 font-semibold mt-0.5">Express Delivery</span>
-          </div>
-          <div class="logo-divider w-[1.5px] h-7 sm:h-8 bg-neutral-900 mx-1"></div>
-          <div class="flex items-center gap-1 pl-1">
-            <i class="fa-solid fa-bolt text-[#c59b27] text-lg sm:text-xl"></i>
-            <span class="text-xl sm:text-2xl font-black tracking-tight leading-none">Express</span>
-          </div>
-        </a>
-      </div>
+      <div class="bg-white/90 backdrop-blur-md border border-stone-200 rounded-3xl shadow-xl p-6 sm:p-10 lg:p-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- Left Column: Branding, Heading, and Trust Points -->
+          <div class="lg:col-span-6 flex flex-col justify-center">
+            
+            <!-- Quick Tag & Logo -->
+            <div class="flex flex-wrap items-center gap-3 mb-4">
+              <a href="#home" class="logo-box inline-flex items-center border border-neutral-900 px-3 py-1.5 rounded text-neutral-900 group hover:border-[#c59b27] transition-colors">
+                <div class="flex flex-col pr-2 text-right">
+                  <span class="text-lg sm:text-xl font-bold tracking-tight leading-none">Foodie</span>
+                  <span class="text-[8px] tracking-widest uppercase opacity-90 font-semibold mt-0.5">Delivery</span>
+                </div>
+                <div class="logo-divider w-[1.5px] h-6 bg-neutral-900 mx-1"></div>
+                <div class="flex items-center gap-1 pl-1">
+                  <i class="fa-solid fa-bolt text-[#c59b27] text-base"></i>
+                  <span class="text-lg sm:text-xl font-black tracking-tight leading-none">Express</span>
+                </div>
+              </a>
+              <span class="inline-flex items-center gap-1.5 bg-[#c59b27]/10 text-[#b0871e] border border-[#c59b27]/20 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
+                <i class="fa-solid fa-comments"></i> Inquiries &amp; Updates
+              </span>
+            </div>
 
-      <!-- Center: Subcribe & Subtitle in Cursive -->
-      <div class="md:col-span-5 text-center md:text-left">
-        <h3 class="font-script text-3xl sm:text-4xl font-bold text-neutral-800 leading-none">
-          Subcribe
-        </h3>
-        <p class="text-xs sm:text-sm text-neutral-500 mt-1">
-          Get more news and delicious dishes everyday from us
-        </p>
-      </div>
+            <!-- Engaging Heading with Cursive Accent -->
+            <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-neutral-900 tracking-tight leading-tight">
+              Got a Question or Craving?
+              <span class="font-script text-3xl sm:text-4xl md:text-5xl text-[#c59b27] font-normal block sm:inline mt-1 sm:mt-0"> Drop us a line.</span>
+            </h3>
 
-      <!-- Right: Email Input Field with Paper Plane Icon -->
-      <div class="md:col-span-4 flex justify-center md:justify-end">
-        <form onsubmit="event.preventDefault(); alert('🎉 Thank you for subscribing to FoodieExpress!');" class="w-full max-w-sm">
-          <div class="flex items-center bg-stone-100 rounded border border-stone-200 overflow-hidden shadow-inner">
-            <input type="email" required placeholder="Email" class="w-full bg-transparent px-4 py-2.5 text-xs sm:text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none">
-            <button type="submit" aria-label="Subscribe" class="px-4 py-2.5 text-[#c59b27] hover:text-[#b0871e] hover:scale-110 transition-transform focus:outline-none">
-              <i class="fa-solid fa-paper-plane text-sm"></i>
-            </button>
+            <!-- Description -->
+            <p class="text-neutral-600 text-sm sm:text-base leading-relaxed mt-3 max-w-lg">
+              Whether you need special event catering, want to leave feedback, or wish to subscribe for secret discount codes, we'd love to hear from you!
+            </p>
+
+            <!-- Trust Points / Highlights -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 pt-6 border-t border-stone-200/80 text-xs text-neutral-700">
+              <div class="flex items-center gap-2">
+                <span class="w-8 h-8 rounded-full bg-amber-50 text-[#c59b27] flex items-center justify-center font-bold">
+                  <i class="fa-solid fa-bolt"></i>
+                </span>
+                <div>
+                  <p class="font-bold">Fast Inquiries</p>
+                  <p class="text-[11px] text-neutral-500">Replies within 15 mins</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </span>
+                <div>
+                  <p class="font-bold">Zero Spam Guarantee</p>
+                  <p class="text-[11px] text-neutral-500">100% privacy protection</p>
+                </div>
+              </div>
+            </div>
+
           </div>
-        </form>
+
+          <!-- Right Column: Interactive Tabs (Send Message vs Newsletter Subscribe) -->
+          <div id="contact_tab" class="lg:col-span-6 bg-stone-50/90 rounded-2xl p-5 sm:p-7 border border-stone-200 shadow-inner">
+            
+            <!-- Tab Buttons -->
+            <div class="flex items-center gap-2 bg-stone-200/80 p-1 rounded-xl mb-5">
+              <button id="tab-btn-msg" type="button" onclick="switchMsgTab('message')" class="flex-1 py-2 px-3 rounded-lg text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all bg-white text-neutral-900 shadow-sm cursor-pointer">
+                <i class="fa-solid fa-paper-plane text-[#c59b27]"></i>
+                <span>Send Message</span>
+              </button>
+              <button id="tab-btn-sub" type="button" onclick="switchMsgTab('subscribe')" class="flex-1 py-2 px-3 rounded-lg text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all text-neutral-600 hover:text-neutral-900 cursor-pointer">
+                <i class="fa-solid fa-envelope-open-text text-[#c59b27]"></i>
+                <span>Subscribe (News)</span>
+              </button>
+            </div>
+
+            <!-- Panel 1: Quick Message Form -->
+            <form id="msg-form" onsubmit="handleMsgSubmit(event)" class="space-y-3.5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-[11px] font-bold uppercase text-neutral-600 mb-1">Your Name</label>
+                  <input type="text" id="msg-name" required placeholder="John Doe" class="w-full bg-white px-3.5 py-2.5 text-xs sm:text-sm text-neutral-800 rounded-lg border border-stone-300 focus:outline-none focus:border-[#c59b27] focus:ring-1 focus:ring-[#c59b27] transition-all">
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold uppercase text-neutral-600 mb-1">Your Email</label>
+                  <input type="email" id="msg-email" required placeholder="john@example.com" class="w-full bg-white px-3.5 py-2.5 text-xs sm:text-sm text-neutral-800 rounded-lg border border-stone-300 focus:outline-none focus:border-[#c59b27] focus:ring-1 focus:ring-[#c59b27] transition-all">
+                </div>
+              </div>
+              <div>
+                <label class="block text-[11px] font-bold uppercase text-neutral-600 mb-1">Your Message or Catering Inquiry</label>
+                <textarea id="msg-content" rows="3" required placeholder="Type your message, question, or special order details here..." class="w-full bg-white px-3.5 py-2.5 text-xs sm:text-sm text-neutral-800 rounded-lg border border-stone-300 focus:outline-none focus:border-[#c59b27] focus:ring-1 focus:ring-[#c59b27] transition-all resize-none"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-[#c59b27] hover:bg-[#b0871e] text-white py-3 px-6 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-lg hover:scale-[1.01] active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Send Message to FoodieExpress</span>
+              </button>
+            </form>
+
+            <!-- Panel 2: Newsletter Subscribe Form (Hidden by default) -->
+            <form id="subscribe-form" onsubmit="handleSubscribeSubmit(event)" class="hidden space-y-3.5">
+              <div class="text-center sm:text-left mb-2">
+                <h4 class="font-bold text-neutral-800 text-sm sm:text-base">Get Weekly Secret Deals &amp; Discounts</h4>
+                <p class="text-xs text-neutral-500 mt-0.5">Subscribe to get notified about our flash sales and daily menu specials.</p>
+              </div>
+              <div>
+                <label class="block text-[11px] font-bold uppercase text-neutral-600 mb-1">Email Address</label>
+                <div class="flex items-center bg-white rounded-lg border border-stone-300 overflow-hidden focus-within:border-[#c59b27] focus-within:ring-1 focus-within:ring-[#c59b27]">
+                  <span class="pl-3.5 text-neutral-400"><i class="fa-regular fa-envelope"></i></span>
+                  <input type="email" id="sub-email" required placeholder="Enter your email address" class="w-full bg-transparent px-3 py-2.5 text-xs sm:text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none">
+                </div>
+              </div>
+              <div class="bg-amber-50 border border-amber-200 rounded-lg p-2.5 flex items-center gap-2 text-xs text-amber-800">
+                <i class="fa-solid fa-gift text-base text-[#c59b27]"></i>
+                <span>Bonus: Get an instant <strong>20% discount code</strong> on subscription!</span>
+              </div>
+              <button type="submit" class="w-full bg-[#c59b27] hover:bg-[#b0871e] text-white py-3 px-6 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-lg hover:scale-[1.01] active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer">
+                <i class="fa-solid fa-bell"></i>
+                <span>Subscribe For Deals</span>
+              </button>
+            </form>
+
+            <!-- Success Message Toast Container -->
+            <div id="contact-toast" class="hidden mt-3 bg-emerald-700 text-white text-xs font-semibold px-4 py-2.5 rounded-lg shadow-md flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-sm text-emerald-200"></i>
+              <span id="contact-toast-text">Message sent successfully!</span>
+            </div>
+
+          </div>
+
+        </div>
       </div>
 
     </div>
   </section>
 
   <!-- ================= MAIN FOOTER WITH FLOATING ORANGE CARD (Exact Image Style) ================= -->
-  <footer id="contact" class="bg-neutral-950 text-neutral-300 relative overflow-visible pt-14 pb-12 px-4 sm:px-8 border-t border-neutral-900">
+  <footer class="bg-neutral-950 text-neutral-300 relative overflow-visible pt-14 pb-12 px-4 sm:px-8 border-t border-neutral-900">
     <!-- Subtle dark vignette gradient -->
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80 pointer-events-none"></div>
 
@@ -732,17 +820,45 @@
         <!-- Left Side: Social Icons, 3 Paragraphs, Divider & Contact Badges -->
         <div class="lg:col-span-7 xl:col-span-8 flex flex-col justify-between">
           
-          <!-- Social Icons at Top Right of Left Column -->
-          <div class="flex items-center justify-end gap-3 mb-6">
-            <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-neutral-900/90 border border-neutral-800 hover:border-[#c59b27] hover:bg-[#c59b27] text-white flex items-center justify-center text-sm transition-all shadow">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-neutral-900/90 border border-neutral-800 hover:border-[#c59b27] hover:bg-[#c59b27] text-white flex items-center justify-center text-sm transition-all shadow">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="#" aria-label="TripAdvisor" class="w-9 h-9 rounded-full bg-neutral-900/90 border border-neutral-800 hover:border-[#c59b27] hover:bg-[#c59b27] text-white flex items-center justify-center text-sm transition-all shadow">
-              <i class="fa-brands fa-tripadvisor"></i>
-            </a>
+          <!-- Top Row: Prominent Website Name / Logo & Social Media Links -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-neutral-800/80">
+            
+            <!-- Prominent Website Logo / Name (Requirement 6.1: Display website name) -->
+            <div class="flex items-center gap-3">
+              <a href="#home" class="logo-box inline-flex items-center border border-white/80 px-3.5 py-1.5 rounded text-white group hover:border-[#c59b27] transition-all bg-black/40">
+                <div class="flex flex-col pr-2 text-right">
+                  <span class="text-xl sm:text-2xl font-bold tracking-tight leading-none text-white">Foodie</span>
+                  <span class="text-[8px] sm:text-[9px] tracking-widest uppercase opacity-90 text-amber-300 font-semibold mt-0.5">Express Delivery</span>
+                </div>
+                <div class="logo-divider w-[1.5px] h-7 sm:h-8 bg-white mx-1"></div>
+                <div class="flex items-center gap-1 pl-1">
+                  <i class="fa-solid fa-bolt text-[#c59b27] text-lg sm:text-xl"></i>
+                  <span class="text-xl sm:text-2xl font-black tracking-tight leading-none text-white">Express</span>
+                </div>
+              </a>
+              <div class="hidden sm:block border-l border-neutral-700 pl-3">
+                <p class="text-xs font-semibold tracking-wider uppercase text-[#c59b27]">FoodieExpress Official</p>
+                <p class="text-[11px] text-stone-400">Delicious Food Delivered Fast</p>
+              </div>
+            </div>
+
+            <!-- Social Media Icons (Requirement 6.3: At least 2 social links) -->
+            <div class="flex items-center gap-3">
+              <span class="text-xs text-neutral-400 font-medium hidden md:inline-block mr-1">Follow Us:</span>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="FoodieExpress on Facebook" class="w-9 h-9 rounded-full bg-neutral-900/90 border border-neutral-800 hover:border-[#c59b27] hover:bg-[#c59b27] text-white flex items-center justify-center text-sm transition-all shadow hover:scale-110">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="FoodieExpress on Instagram" class="w-9 h-9 rounded-full bg-neutral-900/90 border border-neutral-800 hover:border-[#c59b27] hover:bg-[#c59b27] text-white flex items-center justify-center text-sm transition-all shadow hover:scale-110">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://tripadvisor.com" target="_blank" rel="noopener noreferrer" aria-label="FoodieExpress on TripAdvisor" class="w-9 h-9 rounded-full bg-neutral-900/90 border border-neutral-800 hover:border-[#c59b27] hover:bg-[#c59b27] text-white flex items-center justify-center text-sm transition-all shadow hover:scale-110">
+                <i class="fa-brands fa-tripadvisor"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="FoodieExpress on Twitter" class="w-9 h-9 rounded-full bg-neutral-900/90 border border-neutral-800 hover:border-[#c59b27] hover:bg-[#c59b27] text-white flex items-center justify-center text-sm transition-all shadow hover:scale-110">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </div>
+
           </div>
 
           <!-- 3 Story Paragraphs matching image -->
@@ -876,9 +992,9 @@
 
       </div>
 
-      <!-- Copyright Sub-Footer Bar -->
-      <div class="border-t border-neutral-900 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-neutral-500 text-xs">
-        <p>&copy; 2026 FoodieExpress. All rights reserved.</p>
+      <!-- Copyright Sub-Footer Bar (Requirement 6.2: Add copyright text) -->
+      <div class="border-t border-neutral-900 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-neutral-400 text-xs">
+        <p>&copy; 2026 <strong class="text-white font-bold tracking-wide">FoodieExpress</strong>. All rights reserved.</p>
         <div class="flex gap-6">
           <a href="#" class="hover:text-stone-300 transition-colors">Privacy Policy</a>
           <a href="#" class="hover:text-stone-300 transition-colors">Terms of Service</a>
@@ -953,46 +1069,109 @@
       });
     }
 
-    // Active link highlighting on scroll (supports Home, Why Us, Menu, About, and Contact footer)
+    // ================= ACTIVE SECTION SCROLL SPY & CLICK SYNC =================
     const desktopNavLinks = document.querySelectorAll('#main-navbar nav a.nav-link');
-    const trackedSections = [
-      document.getElementById('home'),
-      document.getElementById('why-us'),
-      document.getElementById('menu'),
-      document.getElementById('about'),
-      document.getElementById('contact')
-    ].filter(Boolean);
+    const mobileNavLinks = document.querySelectorAll('#mobile-menu a.mobile-nav-link');
 
-    function updateActiveSection() {
-      const scrollY = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const docHeight = document.documentElement.scrollHeight;
+    function setActiveLink(activeId) {
+      if (!activeId) return;
 
-      let currentId = 'home';
-
-      // If user has scrolled to or near the bottom of the page, activate Contact
-      if (scrollY + windowHeight >= docHeight - 100) {
-        currentId = 'contact';
-      } else {
-        const scrollPosition = scrollY + 160;
-        trackedSections.forEach(section => {
-          if (scrollPosition >= section.offsetTop) {
-            currentId = section.getAttribute('id');
-          }
-        });
-      }
-
+      // Update Desktop Nav Links
       desktopNavLinks.forEach(link => {
-        if (link.getAttribute('href') === `#${currentId}`) {
+        const href = link.getAttribute('href');
+        if (href === `#${activeId}`) {
           link.classList.add('active-link');
         } else {
           link.classList.remove('active-link');
         }
       });
+
+      // Update Mobile Nav Links
+      mobileNavLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === `#${activeId}`) {
+          link.classList.add('text-[#c59b27]', 'font-bold');
+          link.classList.remove('text-neutral-800');
+        } else {
+          link.classList.remove('text-[#c59b27]', 'font-bold');
+          link.classList.add('text-neutral-800');
+        }
+      });
     }
+
+    let isClickScrolling = false;
+    let clickTimeout = null;
+
+    function updateActiveSection() {
+      if (isClickScrolling) return;
+
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+
+      // 1. If at or near bottom of document, activate Contact
+      if (scrollY + windowHeight >= docHeight - 80) {
+        setActiveLink('contact');
+        return;
+      }
+
+      // 2. Check sections in reverse (bottom to top):
+      // The first section whose top edge has passed or is near the upper viewport threshold (200px) is currently active
+      const reverseIds = ['contact', 'about', 'menu', 'why-us', 'home'];
+      const triggerThreshold = 200; // px from top of viewport
+
+      for (const id of reverseIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= triggerThreshold) {
+            setActiveLink(id);
+            return;
+          }
+        }
+      }
+
+      // Default fallback
+      setActiveLink('home');
+    }
+
+    // Attach click handlers to desktop links for immediate active state feedback
+    desktopNavLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        const href = this.getAttribute('href');
+        const targetId = href ? href.replace('#', '') : '';
+        if (targetId) {
+          isClickScrolling = true;
+          setActiveLink(targetId);
+          clearTimeout(clickTimeout);
+          clickTimeout = setTimeout(() => {
+            isClickScrolling = false;
+            updateActiveSection();
+          }, 850);
+        }
+      });
+    });
+
+    // Attach click handlers to mobile links
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        const href = this.getAttribute('href');
+        const targetId = href ? href.replace('#', '') : '';
+        if (targetId) {
+          isClickScrolling = true;
+          setActiveLink(targetId);
+          clearTimeout(clickTimeout);
+          clickTimeout = setTimeout(() => {
+            isClickScrolling = false;
+            updateActiveSection();
+          }, 850);
+        }
+      });
+    });
 
     window.addEventListener('scroll', updateActiveSection, { passive: true });
     window.addEventListener('DOMContentLoaded', updateActiveSection);
+    window.addEventListener('load', updateActiveSection);
 
     // Interactive Order Dish Alert
     function orderDish(name, price) {
@@ -1013,6 +1192,60 @@
       }).catch(() => {
         alert("Coupon FOODIE20 activated! Enjoy 20% off your first order.");
       });
+    }
+
+    // Switch between Message and Subscribe tabs in Pre-Footer Section
+    function switchMsgTab(tab) {
+      const msgForm = document.getElementById('msg-form');
+      const subForm = document.getElementById('subscribe-form');
+      const msgBtn = document.getElementById('tab-btn-msg');
+      const subBtn = document.getElementById('tab-btn-sub');
+
+      if (tab === 'message') {
+        msgForm.classList.remove('hidden');
+        subForm.classList.add('hidden');
+        msgBtn.className = "flex-1 py-2 px-3 rounded-lg text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all bg-white text-neutral-900 shadow-sm cursor-pointer";
+        subBtn.className = "flex-1 py-2 px-3 rounded-lg text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all text-neutral-600 hover:text-neutral-900 cursor-pointer";
+      } else {
+        msgForm.classList.add('hidden');
+        subForm.classList.remove('hidden');
+        subBtn.className = "flex-1 py-2 px-3 rounded-lg text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all bg-white text-neutral-900 shadow-sm cursor-pointer";
+        msgBtn.className = "flex-1 py-2 px-3 rounded-lg text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all text-neutral-600 hover:text-neutral-900 cursor-pointer";
+      }
+    }
+
+    // Handle Quick Message Submission
+    function handleMsgSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('msg-name').value;
+      const toast = document.getElementById('contact-toast');
+      const toastText = document.getElementById('contact-toast-text');
+      
+      if (toast && toastText) {
+        toastText.textContent = `Thank you ${name}! Your message has been sent to FoodieExpress concierge.`;
+        toast.classList.remove('hidden');
+        document.getElementById('msg-form').reset();
+        setTimeout(() => {
+          toast.classList.add('hidden');
+        }, 5000);
+      }
+    }
+
+    // Handle Newsletter Subscription
+    function handleSubscribeSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById('sub-email').value;
+      const toast = document.getElementById('contact-toast');
+      const toastText = document.getElementById('contact-toast-text');
+      
+      if (toast && toastText) {
+        toastText.textContent = `🎉 Welcome! We've sent a 20% discount code to ${email}.`;
+        toast.classList.remove('hidden');
+        document.getElementById('subscribe-form').reset();
+        setTimeout(() => {
+          toast.classList.add('hidden');
+        }, 5000);
+      }
     }
 
     // Initial check on load
